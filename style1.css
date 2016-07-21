@@ -1,0 +1,93 @@
+body
+{
+	/* background-color: rgb(150,210,123);  #CCCCCC;*/   /*yellow;*/ 
+
+	background: url('./img/1.jpg');
+	background-repeat: no-repeat; /*repeat-y;*/ /*repeat-x;*/
+	background-size: 100% 100%;
+	background-attachment: fixed;
+}
+
+div
+{
+	background-color: yellow;
+	height: 100px;
+	/*width: 100px;*/
+	float: left;
+	/*border:1px black dashed;*/
+	border-width: 1px;
+	border-color: black;
+	border-style: dashed;
+	/*border-left-width: 1px;
+	border-right-width:2px;
+	border-top-width: 1px;
+	border-bottom-width: 2px; 
+	border-width: 1px 2px 3px 4px;*/
+	padding: 10px 5px 10px 5px;
+	margin: 10px;
+	overflow: scroll;
+	width: 30%;
+	min-width: 100px;
+	max-width: 300px;
+
+	font-size: 20px;  /* px , cm ,inch , em     */ 
+	color: blue;
+	font-family: Tahoma;
+	font-style: italic;
+	text-align: right;	
+	opacity: 0.5;
+}
+#span1
+{
+	font-size: 1.2em;
+}
+
+
+
+a
+{
+	background-color: yellow; 
+}
+a:visited
+{
+	background-color: orange;
+}
+a:active
+{
+	background-color: red;
+}
+a:hover
+{
+	background-color: #CCCCCC;	
+}
+
+#div2
+{
+	/*position:absolute;/*fixed*/*/
+	/*left:50px;
+	top:100px; 
+	z-index: -1;*/
+
+	
+}
+
+#div1
+{
+	/*z-index:1; */
+	/*transform: rotate(180deg);
+*/
+/*	transform: skew(30deg,20deg);		
+*/
+background-color: yellow;
+
+transition: transform 5s;
+
+}
+#div1:hover
+{
+transform: rotate(180deg);
+background-color: red;
+}
+
+
+

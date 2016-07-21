@@ -1,0 +1,49 @@
+		div
+			{
+				background-color: yellow;
+			}
+			p
+			{
+				background-color: #CCCCCC;
+			}
+			.new
+			{
+				font-size: 20px;
+			}
+			#p2
+			{
+				font-family: tahoma;
+			}
+
+/*	body , *, html
+	{
+		font-family: verdana;
+	}
+*/
+
+	p , div , .cls , .demo , #id1
+	{
+		color: red;
+	}
+
+	div ul /* #id .cls , .cls #id */
+	{
+		font-size: 24px;
+
+	}
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
