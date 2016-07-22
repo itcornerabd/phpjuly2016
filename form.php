@@ -11,7 +11,7 @@
 <a href="action.php?ID=1&name=abc"> go to action page</a>
 
 
-	<form action="action.php" name="form1"  id="form1" method="POST" >
+	<form action="action.php" name="form1"  id="form1" method="POST" onsubmit="return validate()" >
 		<table>
 			<tr>
 				<td>
@@ -49,7 +49,7 @@
 			<tr>	
 					<td>	Gender</td>
 					<td>
-							<input type="radio" name="radgender" id="radgnder1" value="MALE" > 
+							<input type="radio" name="radgender" id="radgender1" value="MALE" > 
 							<label for="radgnder1">Male	</label>	
 							
 
@@ -75,11 +75,11 @@
 			<tr>	
 					<td>Hobby</td>
 					<td>
-						<input type="checkbox" name="chkhobby[12]" id="chk1" value="Cricket" ><!-- checked -->
+						<input type="checkbox" name="chkhobby[12]" id="chkhobby1" value="Cricket" ><!-- checked -->
 						<label for="chk1">	Cricket</label>
-						<input type="checkbox" name="chkhobby[32]" id="chk2" value="Tenis">
+						<input type="checkbox" name="chkhobby[32]" id="chkhobby2" value="Tenis">
 						<label for="chk2">	Tenis</label>
-						<input type="checkbox" name="chkhobby[43]" id="chk3" value="Football">
+						<input type="checkbox" name="chkhobby[43]" id="chkhobby3" value="Football">
 						<label for="chk3">	Football</label>
 					</td>	
 			</tr>
@@ -89,6 +89,7 @@
 						<input type="hidden" name="hid" value="<?php echo date('Y') ?>">	
 						<input type="button" name="" value="Button">
 						<input type="submit" name="" value="SUBMIT">
+						<!--   onclick=" return validate()" -->
 						<input type="reset" name="" value="RESET">
 						<button>Button tag</button>	
 
@@ -99,3 +100,6 @@
 
 </body>
 </html>
+
+
+<script type="text/javascript" src="validate.js"></script>
