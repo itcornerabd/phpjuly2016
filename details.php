@@ -1,9 +1,4 @@
 <?php require('constr.php');  ?>
-<html>
-<head>
-	<title>Details</title>
-</head>
-<body>
 <?php 
 
 	if(isset($_GET['id']))
@@ -24,16 +19,53 @@
 
 	if($rs=mysqli_fetch_array($rows))
 	{
-		echo $rs['name'];
-
+		 $name =$rs['name'];
+		 $address=$rs['address'];
+		 $contact=$rs['contact'];
+		 $email=$rs['email'];
 	}
 	else
 	{
-		echo "record not found";
-
+		die("record not found");
 	}
 
 
  ?>
+
+
+<html>
+<head>
+	<title>Details</title>
+	<link rel="stylesheet" href="./css/table.css">
+</head>
+<body>
+
+
+
+
+ 
+<table>
+				<tr>
+					<td>ID</td>
+					<td><?php echo $id; ?></td>
+				</tr>
+				<tr>
+					<td>Name</td>
+					<td><?php echo $name; ?></td>
+				</tr>
+				<tr>
+					<td>Contact</td>
+					<td><?php echo $contact ?></td>
+				</tr>
+				<tr>
+					<td>Email</td>
+					<td><?php echo $email; ?></td>
+				</tr>
+				<tr>
+					<td>Address</td>
+					<td><?php echo $address; ?></td>
+				</tr>
+			</table>
+ 
 </body>
 </html>

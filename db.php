@@ -8,26 +8,15 @@ require('constr.php');
 
 
 
-$query = "select * from tbl_info";
+$query = "select * from tbl_info  ";
 
 
  ?>
  <html>
  <head>
  	<title>Database Demo</title>
- 	<style type="text/css">
- 		table,tr,td,th
- 		{
- 			border: 1px solid black;
- 			border-collapse: collapse;
-
- 		}
- 		table
- 		{
- 			width: 500px;
- 		}
-
- 	</style>
+ 
+ <link rel="stylesheet" href="./css/table.css">
  </head>
  <body>
 
@@ -39,6 +28,7 @@ $query = "select * from tbl_info";
  			<th>Address</th>
  			<th>Email ID </th>
  			<th>Details</th>
+ 			<th>Delete</th>
  		</tr>	
  		<?php 
  				$rows = mysqli_query($con,$query);
@@ -56,6 +46,27 @@ $query = "select * from tbl_info";
 	 			<td><?php echo $rs['address']; ?></td>
 	 			<td><?php echo $rs['email'] ?></td>
 	 			<td> <a href="details.php?id=<?php echo $rs['id']; ?>">  Details </a></td>
+				
+				<?php 
+				if($rs['status']=='YES')
+				{
+
+
+					 ?>
+	 			<td> <a href="delete.php?id=<?php echo $rs['id']; ?>">  delete </a></td>
+			 	<?php }
+
+			 		else
+			 		{
+
+			 	 ?>
+							<td> <a href="revert.php?id=<?php echo $rs['id']; ?>">  revert </a></td>
+						
+					<?php 
+						}
+					 ?>	
+
+
 	 		</tr>	
 
  		<?php 
