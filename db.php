@@ -19,6 +19,10 @@ $query = "select * from tbl_info  ";
  <link rel="stylesheet" href="./css/table.css">
  </head>
  <body>
+	
+	<a href="insert.php">Add new </a>
+
+
 
  	<table align="center">
  		<tr>	
@@ -43,8 +47,8 @@ $query = "select * from tbl_info  ";
 	 			<td><?php echo $rs['id']; ?></td>
 	 			<td><?php echo $rs['name']; ?></td>
 	 			<td><?php echo $rs['contact']; ?></td>
-	 			<td><?php echo $rs['address']; ?></td>
-	 			<td><?php echo $rs['email'] ?></td>
+	 			<td><?php echo htmlentities($rs['address']); ?></td>
+	 			<td><?php echo $rs['email']; ?></td>
 	 			<td> <a href="details.php?id=<?php echo $rs['id']; ?>">  Details </a></td>
 				
 				<?php 
