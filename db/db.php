@@ -31,6 +31,7 @@ $query = "select * from tbl_info  ";
  			<th>Contact</th>
  			<th>Address</th>
  			<th>Email ID </th>
+ 			<th>Edit</th>
  			<th>Details</th>
  			<th>Delete</th>
  		</tr>	
@@ -47,8 +48,9 @@ $query = "select * from tbl_info  ";
 	 			<td><?php echo $rs['id']; ?></td>
 	 			<td><?php echo $rs['name']; ?></td>
 	 			<td><?php echo $rs['contact']; ?></td>
-	 			<td><?php echo htmlentities($rs['address']); ?></td>
+	 			<td><?php echo nl2br(htmlentities($rs['address'])); ?></td>
 	 			<td><?php echo $rs['email']; ?></td>
+	 			<td> <a href="edit.php?id=<?php echo $rs['id']; ?>">  Edit </a></td>
 	 			<td> <a href="details.php?id=<?php echo $rs['id']; ?>">  Details </a></td>
 				
 				<?php 
@@ -123,3 +125,6 @@ $query = "select * from tbl_info  ";
   ?>
  </body>
  </html>
+ <?php 
+ 	require('/closestr.php')
+  ?>
