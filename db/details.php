@@ -1,5 +1,7 @@
 <?php require('constr.php');  ?>
 <?php 
+echo $_SESSION['username'];
+echo $_SESSION['userid'];
 
 	if(isset($_GET['id']))
 	{

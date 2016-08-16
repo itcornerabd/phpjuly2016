@@ -5,8 +5,15 @@ require('constr.php');
  // 3 . query execute 
  //  4. check result and read  
 //error_reporting(0);
+if(!isset($_SESSION['username']))
+{
+header("location:login.php");
+}
 
 
+
+echo $_SESSION['username'];
+echo $_SESSION['userid'];
 
 $query = "select * from tbl_info  ";
 
@@ -21,6 +28,8 @@ $query = "select * from tbl_info  ";
  <body>
 	
 	<a href="insert.php">Add new </a>
+
+	<a href="logout.php">logout </a>
 
 
 

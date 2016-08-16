@@ -1,7 +1,7 @@
 <?php 
 require('./constr.php');
 $name=$contact=$email=$address="";
-
+$id=0;
 $pagename="insert.php";
 
  if(isset($_POST['name']))
