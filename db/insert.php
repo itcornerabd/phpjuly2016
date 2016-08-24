@@ -2,6 +2,12 @@
 require('./constr.php');
 $name=$contact=$email=$address="";
 $id=0;
+
+$token = 'asdasdasd';
+
+$_SESSION['token']= $token;
+
+
 $pagename="insert.php";
 
  if(isset($_POST['name']))
@@ -10,8 +16,12 @@ $pagename="insert.php";
  	$contact=$_POST['contact'];
  	$email=$_POST['email'];
  	$address=$_POST['address'];
+ 	$form_token= $_POST['token'];
+ 	$session_token = $_SESSION['token'];
 
-
+ 
+if($session_token==$form_token )
+{
 $query = "insert into tbl_info (name,contact,email,address,status) values('$name','$contact','$email','$address','YES') ";
 
 $result = mysqli_query($con,$query);
@@ -24,6 +34,11 @@ $result = mysqli_query($con,$query);
 	{
 		header("location:db.php?msg=record inserted");
 	}
+}
+else
+{
+	die("invalid token");
+}
 	
 
 

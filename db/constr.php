@@ -26,8 +26,9 @@ if(!$con)
 
 function input($element)
 {
+	global $con;
 	if(isset($_REQUEST[$element]))
-		return $_REQUEST[$element];
+		return  mysqli_escape_string($con, $_REQUEST[$element]);
 	else
 		return "";
 }

@@ -1,4 +1,20 @@
 
+<?php  
+$name=$contact=$email=$address="";
+$id=0;
+$pagename="insert.php";
+
+?>
+
+
+<html>
+	<head>
+		<title>Edit</title>
+		<link rel="stylesheet" href="./css/table.css">
+	</head>
+
+	<body>
+		 
 <form action="<?php echo $pagename ?>" method="POST" name="form1" id="form1">
 
 		<table>
@@ -29,8 +45,11 @@
 						<input type="hidden" name="id" value="<?php echo $id; ?>" >
 						<input type="submit" value="ADD">
 
-					<input type="hidden" name="token" value="<?php echo $token; ?>" >
+					
 				</td>
 				 
 			</tr>
 		</table>
+	</form>
+	</body>
+</html>

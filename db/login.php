@@ -8,7 +8,11 @@
 	if(!empty($username))
 	{
 
+		 
+
 		$query = "select * from tbl_login where username ='$username' and password ='$password' ";
+
+		echo $query;
 
 		$rows= mysqli_query($con,$query);
 		if(!$rows)

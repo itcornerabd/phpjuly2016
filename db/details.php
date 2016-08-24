@@ -12,7 +12,7 @@ echo $_SESSION['userid'];
 		die("Selected record not found");
 	}
 	$query = "select * from tbl_info where id=$id";
-
+	echo "<!--" .$query. "-->";
 	$rows= mysqli_query($con,$query);
 	if(!$rows)
 	{
