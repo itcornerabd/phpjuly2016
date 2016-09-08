@@ -3,8 +3,6 @@
 
 	$return=[];
 
-
-
 	$query ="SELECT distinct( substr(Word,1,1)) as letter FROM `shabdkosh` ";
 
 	$rows = mysqli_query($con,$query);
